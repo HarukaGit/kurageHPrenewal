@@ -31,13 +31,11 @@ html {
   scroll-behavior: smooth;
   background-color: var(--color-light-brown);
 }
-
 h2 {
   font-family: setofont-sp, sans-serif;
   font-size: 36px;
   font-weight: 200;
 }
-
 h3 {
   font-family: 'Caveat', cursive;
   font-size: 128px;
@@ -45,14 +43,12 @@ h3 {
   line-height: 100px;
   color: var(--color-brown);
 }
-
 h4 {
   font-family: setofont-sp, sans-serif;
   font-size: 48px;
   font-weight: 200;
   letter-spacing: 15px;
 }
-
 h5 {
   font-size: 15px;
   font-weight: 300;
@@ -60,12 +56,32 @@ h5 {
   line-height: 25px;
   text-align: center;
 }
-
 p {
   font-size: 18px;
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 7px;
+}
+
+/* -----------------------------------------------------
+共通設定レスポンシブ
+----------------------------------------------------- */
+@media (max-width:960px) {
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 72px;
+  }
+  h4 {
+    font-size: 36px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
 }
 
 
@@ -100,7 +116,7 @@ p {
 
         & a {
           font-family: setofont-sp, sans-serif;
-          font-size: 24px;
+          font-size: 20px;
           text-decoration: none;
           color: #fff;
         }
@@ -673,9 +689,10 @@ footer {
 
         & li {
           list-style-type: disc;
-          margin-left: 40px;
+          margin-left: 30px;
 
           & a {
+            font-size: 20px;
             color: #000;
           }
 
@@ -802,7 +819,11 @@ FAQページ
 
 
 /* -------------------------------------------------------------------
-レスポンシブ
+FAQページレスポンシブ
 -------------------------------------------------------------------- */
 
-@media screen {}
+@media (max-width:900px) {
+  html {
+
+  }
+}
