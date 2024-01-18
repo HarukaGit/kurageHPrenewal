@@ -14,6 +14,8 @@
   --color-brown: #EADAB0;
   --color-dark-brown: #D6BA74;
   --color-blue: #E8F4FF;
+  --responsive-width1: calc(100vw - 60px);
+  --responsive-width2: calc(100vw - 120px);
 }
 
 * {
@@ -86,7 +88,9 @@ p {
 
 
 
-/* -----ヘッダー----- */
+/* ------------------------------------------------------
+ヘッダー
+------------------------------------------------------- */
 .nav {
   background-color: var(--color-dark-brown);
   height: 70px;
@@ -130,12 +134,22 @@ p {
   }
 }
 
+.openbtn {
+  display: none;
+}
+.toggle-nav {
+  height: 0;
+}
+
 .mainvisual {
   color: #fff;
   position: relative;
 
   & img {
     width: 100vw;
+  }
+  .phone-mainvisual {
+    display: none;
   }
 
   & p {
@@ -148,6 +162,7 @@ p {
     position: absolute;
     top: 50px;
     left: 100px;
+    width: 500px;
   }
 
   .shop-name {
@@ -167,6 +182,133 @@ p {
   }
 }
 
+
+
+/* ------------------------------------------------
+ヘッダーレスポンシブ
+-------------------------------------------------- */
+@media (max-width:900px) {
+  .nav {
+    .nav-wrapper {
+      
+      & ul {
+        display: none;
+      }
+    }
+  }
+
+  .openbtn {
+    display: block;
+    position: relative;
+    cursor: pointer;
+      width: 50px;
+      height:50px;
+      margin-top: -2px;
+    
+    & span{
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 0px;
+        height: 5px;
+        border-radius: 4px;
+      background: #fff;
+        width: 90%;
+      }
+      & span:nth-of-type(1) {
+        top:10px;	
+      }
+      & span:nth-of-type(2) {
+        top:25px;
+      }
+      & span:nth-of-type(3) {
+        top:40px;
+      }
+  }
+  /*クリックするとactiveクラスが付与されるて変形*/
+  .active {
+  
+    & span:nth-of-type(1) {
+        top: 18px;
+        left: 3px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 90%;
+    }
+    & span:nth-of-type(2) {
+      opacity: 0;/*真ん中の線は透過*/
+    }
+    & span:nth-of-type(3){
+      top: 30px;
+      left: 3px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 90%;
+    }
+  }
+  .toggle-nav {
+    height: 0;
+    transition: 0.5s;
+  }
+  /*クリックするとopenクラスが付与されて変形*/
+  .open {
+    height: 200px;
+  }
+  
+  .mainvisual {
+    position: relative;
+
+    .pc-mainvisual {
+      display: none;
+    }
+    .phone-mainvisual {
+      display: block;
+      z-index: -2;
+    }
+    .square {
+      position: absolute;
+      background-color: var(--color-dark-brown);
+      top: 0;
+      width: 100%;
+      height: 70px;
+    }
+    .semicircle {
+      position: absolute;
+      background-color: var(--color-dark-brown);
+      top: 70px;
+      width: 100vw;
+      height: 50vw;
+      border-radius: 0 0 50vw 50vw;
+    }
+    .concept-text {
+      font-size: 20px;
+      text-align: center;
+      min-width: 300px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+    }
+    .shop-name {
+      top: 35vw;
+       & h1 {
+        font-size: 20vw;
+        width: var(--responsive-width2);
+       }
+       & p {
+        position: absolute;
+        font-size: 16px;
+        min-width: 300px;
+        top: 20vw;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+  
+       }
+    }
+  }
+}
+  
 
 /* -------------------------------------------------
 main
@@ -456,12 +598,12 @@ main
   width: 900px;
   text-align: center;
   margin-inline: auto;
-  margin-top: 200px;
+  padding-top: 200px;
   position: relative;
 
   & h3 {
     position: absolute;
-    top: -50px;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);

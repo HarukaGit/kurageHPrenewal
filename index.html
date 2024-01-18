@@ -14,6 +14,7 @@
     <meta property="og:title" content="シーシャCAFE&BAR　くらげ">
     <meta property="og:description" content="長岡駅のくつろぎ空間">
     <!-- スタイルシートはここから -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
+    </head>
 </head>
 <body>
     <header id="header">
@@ -42,19 +44,36 @@
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#shisha">水たばこ</a></li>
                         <li><a href="./FAQ.html">FAQ</a></li>
-                        <li><a href="flavor">フレーバー</a></li>
+                        <li><a href="#flavor">フレーバー</a></li>
                         <li><a href="#system">システム</a></li>
                         <li><a href="#coffee">コーヒー</a></li>
                         <li><a href="#sales">物販</a></li>
                         <li><a href="#access">アクセス</a></li>
                     </ul>
-            </div>
+                    <button onclick="" class="openbtn"><span></span><span></span><span></span></button>
+                </div>
         </nav>
+<!-- toggle menu -->
+        <nav class="toggle-nav">
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#shisha">水たばこ</a></li>
+                <li><a href="./FAQ.html">FAQ</a></li>
+                <li><a href="#flavor">フレーバー</a></li>
+                <li><a href="#system">システム</a></li>
+                <li><a href="#coffee">コーヒー</a></li>
+                <li><a href="#sales">物販</a></li>
+                <li><a href="#access">アクセス</a></li>
+            </ul>
+        </nav>
+
+ <!-- メインヴィジュアル -->
         <div class="mainvisual">
-            <img src="./img/PCメインヴィジュアル.png" alt="メインヴィジュアル">
-            div.
-            <img src="./img/モバイルメインヴィジュアル.png" alt="メインヴィジュアル">
+            <img class="pc-mainvisual" src="./img/PCメインヴィジュアル.png" alt="メインヴィジュアル">
+            <img class="phone-mainvisual" src="./img/モバイルメインヴィジュアル.png" alt="メインヴィジュアル">
+            <div class="square"></div>
             <p class="concept-text">落ち着いた空間でひと休み<br>していきませんか。</p>
+            <div class="semicircle"></div>
             <div class="shop-name">
             <h1>くらげ</h1>
             <p>シーシャCafe＆Bar</p>
@@ -174,7 +193,7 @@
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#shisha">水たばこ</a></li>
                             <li><a href="./FAQ.html">FAQ</a></li>
-                            <li><a href="flavor">フレーバー</a></li>
+                            <li><a href="#flavor">フレーバー</a></li>
                             <li><a href="#system">システム</a></li>
                             <li><a href="#coffee">コーヒー</a></li>
                             <li><a href="#sales">物販</a></li>
@@ -184,5 +203,10 @@
             </nav>
         </div>
     </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
