@@ -74,12 +74,16 @@ p {
   }
   h3 {
     font-size: 72px;
+    line-height: 50px;
+    text-align: end;
   }
   h4 {
     font-size: 36px;
   }
   h5 {
     font-size: 12px;
+    width: var(--responsive-width1);
+    margin-inline: auto;
   }
   p {
     font-size: 12px;
@@ -162,7 +166,7 @@ p {
     position: absolute;
     top: 50px;
     left: 100px;
-    width: 500px;
+    width: 550px;
   }
 
   .shop-name {
@@ -279,24 +283,24 @@ p {
       border-radius: 0 0 50vw 50vw;
     }
     .concept-text {
-      font-size: 20px;
+      font-size: 4vw;
       text-align: center;
-      min-width: 300px;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
+      z-index: 1;
     }
     .shop-name {
       top: 35vw;
        & h1 {
-        font-size: 20vw;
+        font-size: 22vw;
         width: var(--responsive-width2);
        }
        & p {
         position: absolute;
-        font-size: 16px;
+        font-size: 3vw;
         min-width: 300px;
         top: 20vw;
         left: 50%;
@@ -340,7 +344,12 @@ main
   }
 }
 
+
 /* -----img-frame----- */
+.phone-img-frame {
+  display: none;
+}
+
 .img-frame {
   position: relative;
   width: 900px;
@@ -508,9 +517,13 @@ main
     }
 
     .FAQ-container {
-      text-align: center;
+      text-align: start;
       margin-top: -35px;
       margin-left: 200px;
+
+      & h4 {
+        margin-left: 7px;
+      }
 
       & p {
         font-size: 15px;
@@ -740,6 +753,103 @@ main
 }
 
 /* --------------------------------------------------------------------
+mainレスポンシブ
+-------------------------------------------------------------------- */
+@media (max-width:900px) {
+  #about {
+    
+    .about-wrapper {
+      width: var(--responsive-width1);
+    }
+  }
+  .img-frame {
+    display: none;
+  }
+  .phone-img-frame {
+    display: block;
+
+    & img {
+      width: 100%;
+      margin-block: 50px;
+    }
+  }
+  .sns-container {
+    width: var(--responsive-width1);
+  }
+  #shisha {
+    display: block;
+    & h3 {
+      right: -5px;
+    }
+    
+    .left {
+      width: var(--responsive-width1);
+      padding-right: 0;
+      margin-inline: auto;
+
+      & P {
+        width: var(--responsive-width2);
+        margin-inline: auto;
+        margin-bottom: 50px;
+      }
+      & a {
+        margin-left: 30px;
+      }
+      .FAQ-container {
+        display: block;
+        text-align: end;
+        width: 100px;
+        margin: 0;
+        margin-top: -40px;
+        margin-left: 250px;
+
+        & p {
+          font-size: 12px;
+          letter-spacing: 5px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .right {
+      & img {
+        width: 100vw;
+      }
+      .shisha-box {
+        position: absolute;
+        top: 10vw;
+        left: 100px;
+        width: var(--responsive-width2);
+        height: 70%;
+        border: 2px solid #000;
+        border-right: none;
+        z-index: -1;
+      }
+    } 
+    }
+  }
+  #flavor {
+    flex-direction: column-reverse;
+  }
+  #system {
+    width: var(--responsive-width2);
+
+    .system-wrapper {
+      background-size: 70vw auto;
+      background-position: 2vw;
+
+    }
+    & h5 {
+      width: var(--responsive-width2);
+    }
+  }
+  #coffee {
+    display: block;
+  }
+  #sales {
+    flex-direction: column-reverse;
+  }
+
+/* --------------------------------------------------------------------
   footer
   ---------------------------------------------------------------------- */
 footer {
@@ -847,6 +957,18 @@ footer {
   }
 }
 
+/* ------------------------------------------------------------------------------
+footerレスポンシブ
+--------------------------------------------------------------------------------- */
+@media (max-width:900px) {
+  .footer-wrapper {
+    flex-direction: column-reverse;
+
+    .contact-box {
+      flex-direction: column;
+    }
+  }
+}
 
 /* -------------------------------------------------------------------------------
 FAQページ
