@@ -70,8 +70,8 @@ p {
 共通設定レスポンシブ
 ----------------------------------------------------- */
 @media (max-width:900px) {
-  html { 
-    width: 100vw;
+  main { 
+    width: 100%;
     overflow-x: hidden;
   }
   h2 {
@@ -1336,9 +1336,6 @@ FAQページレスポンシブ
   & p {
     line-height: 30px;
     padding-bottom: 5px;
-  }
-  html {
-    overflow-x: hidden;
   }
 
 }
