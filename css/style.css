@@ -71,6 +71,7 @@ p {
 ----------------------------------------------------- */
 @media (max-width:900px) {
   html { 
+    width: 100%;
     overflow-x: hidden;
   }
   h2 {
