@@ -14,6 +14,7 @@
     <meta property="og:title" content="シーシャCAFE&BAR　くらげ">
     <meta property="og:description" content="長岡駅のくつろぎ空間">
     <!-- スタイルシートはここから -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,8 +49,33 @@
                         <li><a href="#sales">物販</a></li>
                         <li><a href="#access">アクセス</a></li>
                     </ul>
+                    <button onclick="" class="openbtn"><span></span><span></span><span></span></button>
             </div>
         </nav>
+    <!-- toggle menu -->
+        <nav class="toggle-nav FAQ-toggle-nav">
+            <ul>
+                <li><a class="navbtn" href="#about">ABOUT</a></li>
+                <li><a class="navbtn" href="#shisha">水たばこ</a></li>
+                <li><a class="navbtn" href="./FAQ.html">FAQ</a></li>
+                <li><a class="navbtn" href="#flavor">フレーバー</a></li>
+                <li><a class="navbtn" href="#system">システム</a></li>
+                <li><a class="navbtn" href="#coffee">コーヒー</a></li>
+                <li><a class="navbtn" href="#sales">物販</a></li>
+                <li><a class="navbtn" href="#access">アクセス</a></li>
+            </ul>
+        </nav>
+        <div class="mainvisual FAQ-mainvisual">
+            <div class="square"></div>
+            <p class="concept-text">落ち着いた空間でひと休み<br>していきませんか。</p>
+            <div class="semicircle"></div>
+            <div class="shop-name">
+            <h1>くらげ</h1>
+            <p>シーシャCafe＆Bar</p>
+            </div>
+        </div>
+    </header>
+    <main>
         <div class="FAQ-container">
             <div class="FAQ-title">
                 <h4>FAQ</h4>
@@ -116,6 +142,7 @@
                 </div>
             </div>
         </div>
+        </main>
         <footer>
             <div class="footer-wrapper">
                 <div class="left">
@@ -125,10 +152,13 @@
                     <p>※ 車でのご来店の際は無断駐車等、近隣の住民のご迷惑にならぬようお近くの駐車場への駐車をお願い致します</p>
                     <div class="contact-box">
                         <div class="sns-wrapper">
-                            <img src="./img/Instagram_logo.png" alt="">
-                            <img src="./img/X_logo.png" alt="">
-                            <img src="./img/LINE_logo.png" alt="">
-                        </div>
+                            <a rel="noopener" href="https://www.instagram.com/kurage3977/" target="_blank" class="aioseop-link"><img src="./img/Instagram_logo.png" alt="">
+                            </a>
+                            <a rel="noopener" href="https://twitter.com/kurage3977" target="_blank" class="aioseop-link"><img src="./img/X_logo.png" alt="">
+                            </a>
+                            <a rel="noopener" href="https://lin.ee/CBSOSxs/" target="_blank" class="aioseop-link"><img src="./img/LINE_logo.png" alt="">
+                            </a>
+                        </div>    
                         <div class="tell-box">
                             <p>お電話でのご予約は</p>
                             <a href="tel:080-9052-3977">080-9052-3977</a>
@@ -154,8 +184,13 @@
                                 <li><a href="#access">アクセス</a></li>
                             </ul>
                     </div>
-                </nav>s
+                </nav>
             </div>
         </footer>
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+          <script src="./js/script.js"></script>      
     </body>
     </html>

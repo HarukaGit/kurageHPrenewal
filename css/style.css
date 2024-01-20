@@ -69,6 +69,9 @@ p {
 共通設定レスポンシブ
 ----------------------------------------------------- */
 @media (max-width:960px) {
+  html { 
+    overflow-x: hidden;
+  }
   h2 {
     font-size: 28px;
   }
@@ -249,9 +252,30 @@ p {
     }
   }
   .toggle-nav {
+    font-family: setofont-sp, sans-serif;
     height: 0;
     transition: 0.5s;
-  }
+    width: 300px;
+    margin-inline: auto;
+      & ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        & li {
+          margin: 15px;
+          & a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000;
+          }
+          & a:hover {
+            color: var(--color-dark-brown);
+          }
+        }
+      }
+    }
+    
+  
   /*クリックするとopenクラスが付与されて変形*/
   .open {
     height: 200px;
@@ -312,7 +336,6 @@ p {
     }
   }
 }
-  
 
 /* -------------------------------------------------
 main
@@ -332,15 +355,16 @@ main
       text-align: center;
       margin-bottom: 65px;
     }
-
   }
-
   & h3 {
     position: absolute;
     text-align: right;
     top: 50px;
     left: 65vw;
     z-index: -1;
+  }
+  .tellbtn {
+    display: none;
   }
 }
 
@@ -460,16 +484,20 @@ main
   .sns-wrapper {
     text-align: center;
     margin-top: 15px;
-
-    & img {
-      height: 50px;
-      width: auto;
+    & a {
       margin-left: 40px;
-    }
+      text-decoration: none;
 
-    & img:first-of-type {
+
+      & img {
+        height: 50px;
+        width: auto;
+      }
+    }
+    & a:first-of-type {
       margin-left: 0;
     }
+
   }
 }
 
@@ -757,11 +785,38 @@ mainレスポンシブ
 -------------------------------------------------------------------- */
 @media (max-width:900px) {
   #about {
-    
+    padding-top: 200px;
+    & h3 {
+      top: 150px;
+      right: -5px;
+    }  
     .about-wrapper {
       width: var(--responsive-width1);
+      & h2 {
+        text-align: start;
+      }
+      & p {
+        width: var(--responsive-width2);
+        margin-inline: auto;
+      }
     }
-  }
+    .tellbtn {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+
+      & a {
+        font-family: setofont-sp, sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid #000;
+        padding: 25px;
+        transition-duration: 0.3s;
+      }
+    }
+
+  
   .img-frame {
     display: none;
   }
@@ -776,6 +831,7 @@ mainレスポンシブ
   .sns-container {
     width: var(--responsive-width1);
   }
+}
   #shisha {
     display: block;
     & h3 {
@@ -815,28 +871,66 @@ mainレスポンシブ
         width: 100vw;
       }
       .shisha-box {
-        position: absolute;
-        top: 10vw;
+        top: 70px;
         left: 100px;
-        width: var(--responsive-width2);
-        height: 70%;
+        width: var(--responsive-width1);
+        height: 75vw;
         border: 2px solid #000;
         border-right: none;
         z-index: -1;
       }
     } 
     }
-  }
+  
   #flavor {
     flex-direction: column-reverse;
+
+    & h3 {
+      right: -5px;
+    }
+
+    .right {
+      width: var(--responsive-width1);
+      padding-left: 0;
+      margin-inline: auto;
+
+      & p {
+        width: var(--responsive-width2);
+        margin-inline: auto;
+        margin-bottom: 0;
+      }
+    }
+    .left {
+      width: 100%;
+      & img {
+        width: 100vw;
+      }
+      .flavor-box {
+          top: 70px;
+          right: 100px;
+          width: var(--responsive-width1);
+          height: 75vw;
+          border: 2px solid #000;
+          z-index: -1;
+      }
+      }
+    
   }
   #system {
     width: var(--responsive-width2);
 
+    & h3 {
+      top: 180px;
+    }
     .system-wrapper {
+      height: 80vw;
       background-size: 70vw auto;
       background-position: 2vw;
 
+      & p {
+        margin-block: 0;
+        line-height: 10vw;
+      }
     }
     & h5 {
       width: var(--responsive-width2);
@@ -844,11 +938,71 @@ mainレスポンシブ
   }
   #coffee {
     display: block;
+
+    & h3 {
+      right: -5px;
+    }
+    .left {
+      width: var(--responsive-width1);
+      padding-right: 0;
+      margin-inline: auto;
+
+      & P {
+        width: var(--responsive-width2);
+        margin-inline: auto;
+        margin-bottom: 0;
+      }
+    }
+    .right {
+      & img {
+        width: 100vw;
+      }
+      .coffee-box {
+        top: 70px;
+        left: 100px;
+        width: var(--responsive-width1);
+        height: 75vw;
+        border: 2px solid #000;
+        border-right: none;
+        z-index: -1;
+      }
+    } 
+
   }
   #sales {
     flex-direction: column-reverse;
-  }
 
+    & h3 {
+      right: -5px;
+    }
+    .right {
+      width: var(--responsive-width1);
+      padding-left: 0;
+      margin-inline: auto;
+
+      & p {
+        width: var(--responsive-width2);
+        margin-inline: auto;
+        margin-bottom: 0;
+      }
+    }
+    .left {
+      width: 100%;
+      & img {
+        width: 100vw;
+      }
+      .sales-box {
+          top: 70px;
+          right: 100px;
+          width: var(--responsive-width1);
+          height: 85vw;
+          border: 2px solid #000;
+          z-index: -1;
+      }
+      }
+
+  }
+}
 /* --------------------------------------------------------------------
   footer
   ---------------------------------------------------------------------- */
@@ -878,14 +1032,17 @@ footer {
 
         .sns-wrapper {
           margin-top: 15px;
-
-          & img {
-            height: 40px;
-            width: auto;
+          & a {
             margin-left: 20px;
-          }
+            text-decoration: none;
 
-          & img:first-of-type {
+
+            & img {
+              height: 40px;
+              width: auto;
+            }
+          }
+          & a:first-of-type {
             margin-left: 0;
           }
         }
@@ -900,8 +1057,8 @@ footer {
             font-weight: 500;
             margin-bottom: 10px;
           }
-
-          & a[href*="tel:"] {
+          /* pc画面の時は電話番号リンクを切る */
+          & a {
             pointer-events: none;
             cursor: default;
             text-decoration: none;
@@ -961,27 +1118,77 @@ footer {
 footerレスポンシブ
 --------------------------------------------------------------------------------- */
 @media (max-width:900px) {
-  .footer-wrapper {
-    flex-direction: column-reverse;
+  footer {
+    margin-top: 100px;
 
-    .contact-box {
-      flex-direction: column;
+    .footer-wrapper {
+      width: 100%;
+      flex-direction: column-reverse;
+      .left {
+        padding-right: 0;
+        margin-inline: auto;
+
+        & p {
+          width: var(--responsive-width1);
+          max-width: 500px;
+          font-size: 12px;
+        }
+        .contact-box {
+          flex-direction: column;
+
+          .sns-wrapper {
+            margin-inline: auto;
+            margin-bottom: 20px;
+          }
+          .tell-box {
+            margin-left: -25px;
+            & a {
+              pointer-events: auto;
+              cursor: alias;
+              color: blue;
+            }
+            }
+          }
+        }
+      }
+      .right {
+        width: 100vw;
+        height: 100vw;
+      }
+    }
+    .footer-nav {
+      .nav-wrapper {
+        width: 400px;
+        margin-inline: auto;
+        & ul {
+          display: flex;
+          flex-wrap: wrap;
+          & li {
+            margin: 15px;
+          }
+        }
+      }
     }
   }
-}
+
 
 /* -------------------------------------------------------------------------------
 FAQページ
 --------------------------------------------------------------------------------- */
+.toggle-nav {
+  display: none;
+}
+.FAQ-mainvisual {
+  display: none;
+}
 .FAQ-container {
   width: 900px;
   margin-inline: auto;
 
   .FAQ-title {
-
     & h4 {
       text-align: center;
-      margin-top: 50px;
+      padding-top: 50px;
     }
 
     & p {
@@ -1087,7 +1294,19 @@ FAQページレスポンシブ
 -------------------------------------------------------------------- */
 
 @media (max-width:900px) {
-  html {
-
+  .toggle-nav {
+    display: block;
   }
+  .FAQ-mainvisual {
+    display: block;
+  }
+  .FAQ-container {
+    width: var(--responsive-width2);
+    padding-top: 65vw;
+  }
+  & p {
+    line-height: 30px;
+    padding-bottom: 5px;
+  }
+
 }
