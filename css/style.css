@@ -91,7 +91,8 @@ p {
     margin-inline: auto;
   }
   p {
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 40px;
   }
 }
 
@@ -939,6 +940,7 @@ mainレスポンシブ
       background-position: 2vw;
 
       & p {
+        font-size: 2.8vw;
         margin-block: 0;
         line-height: 10vw;
       }
@@ -1333,9 +1335,18 @@ FAQページレスポンシブ
     width: var(--responsive-width2);
     padding-top: 65vw;
   }
-  & p {
-    line-height: 30px;
-    padding-bottom: 5px;
+.FAQ-container {
+  .question-box {
+
+    .answer {
+      padding-right: 20px;
+    }
+    & p {
+      letter-spacing: 2px;
+      line-height: 30px;
+      padding-block: 5px;
+    }
   }
+}
 
 }
