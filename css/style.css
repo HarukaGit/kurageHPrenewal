@@ -71,7 +71,7 @@ p {
 ----------------------------------------------------- */
 @media (max-width:900px) {
   html { 
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
   }
   h2 {
@@ -80,7 +80,7 @@ p {
   h3 {
     font-size: 72px;
     line-height: 50px;
-    text-align: end;
+    text-align: right;
   }
   h4 {
     font-size: 36px;
@@ -171,7 +171,7 @@ p {
     position: absolute;
     top: 50px;
     left: 100px;
-    width: 550px;
+    max-width: 550px;
   }
 
   .shop-name {
@@ -309,6 +309,7 @@ p {
       border-radius: 0 0 50vw 50vw;
     }
     .concept-text {
+      width: var(--responsive-width1);
       font-size: 4vw;
       text-align: center;
       top: 0;
@@ -789,8 +790,10 @@ mainレスポンシブ
   #about {
     padding-top: 200px;
     & h3 {
+      width: 100%;
       top: 150px;
-      right: -5px;
+      left: 0;
+      overflow-x: hidden;
     }  
     .about-wrapper {
       width: var(--responsive-width1);
@@ -837,7 +840,9 @@ mainレスポンシブ
   #shisha {
     display: block;
     & h3 {
-      right: -5px;
+      width: 100%;
+      left: 0;
+      overflow-x: hidden;
     }
     
     .left {
@@ -874,12 +879,13 @@ mainレスポンシブ
       }
       .shisha-box {
         top: 70px;
-        left: 100px;
+        left: 60px;
         width: var(--responsive-width1);
         height: 75vw;
         border: 2px solid #000;
         border-right: none;
         z-index: -1;
+        overflow-x: hidden;
       }
     } 
     }
@@ -888,7 +894,9 @@ mainレスポンシブ
     flex-direction: column-reverse;
 
     & h3 {
-      right: -5px;
+      width: 100%;
+      left: 0;
+      overflow-x: hidden;
     }
 
     .right {
@@ -909,11 +917,12 @@ mainレスポンシブ
       }
       .flavor-box {
           top: 70px;
-          right: 100px;
+          right: 60px;
           width: var(--responsive-width1);
           height: 75vw;
           border: 2px solid #000;
           z-index: -1;
+          overflow-x: hidden;
       }
       }
     
@@ -942,7 +951,9 @@ mainレスポンシブ
     display: block;
 
     & h3 {
-      right: -5px;
+      width: 100%;
+      left: 0;
+      overflow-x: hidden;
     }
     .left {
       width: var(--responsive-width1);
@@ -961,12 +972,13 @@ mainレスポンシブ
       }
       .coffee-box {
         top: 70px;
-        left: 100px;
+        left: 60px;
         width: var(--responsive-width1);
         height: 75vw;
         border: 2px solid #000;
         border-right: none;
         z-index: -1;
+        overflow-x: hidden;
       }
     } 
 
@@ -975,7 +987,9 @@ mainレスポンシブ
     flex-direction: column-reverse;
 
     & h3 {
-      right: -5px;
+      width: 100%;
+      left: 0;
+      overflow-x: hidden;
     }
     .right {
       width: var(--responsive-width1);
@@ -1126,15 +1140,19 @@ footerレスポンシブ
     .footer-wrapper {
       width: 100%;
       flex-direction: column-reverse;
+
       .left {
+        width: 100vw;
+        overflow-x: hidden;
         padding-right: 0;
-        margin-inline: auto;
 
         & p {
           width: var(--responsive-width1);
           max-width: 500px;
           font-size: 12px;
+          margin-inline: auto;
         }
+
         .contact-box {
           flex-direction: column;
 
@@ -1142,37 +1160,42 @@ footerレスポンシブ
             margin-inline: auto;
             margin-bottom: 20px;
           }
+
           .tell-box {
-            margin-left: -25px;
+
             & a {
               pointer-events: auto;
               cursor: alias;
               color: blue;
             }
-            }
           }
         }
       }
-      .right {
-        width: 100vw;
-        height: 100vw;
-      }
     }
-    .footer-nav {
-      .nav-wrapper {
-        width: 400px;
-        margin-inline: auto;
-        & ul {
-          display: flex;
-          flex-wrap: wrap;
-          & li {
-            margin: 15px;
-          }
+
+    .right {
+      width: 100vw;
+      height: 100vw;
+    }
+  }
+
+  .footer-nav {
+    .nav-wrapper {
+      width: 100vw;
+      padding-left: 10px;
+
+      & ul {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+          margin: 10px;
         }
       }
     }
   }
-
+}
 
 /* -------------------------------------------------------------------------------
 FAQページ
@@ -1302,13 +1325,16 @@ FAQページレスポンシブ
   .FAQ-mainvisual {
     display: block;
   }
-  .FAQ-container {
+  .FAQ-container2 {
     width: var(--responsive-width2);
     padding-top: 65vw;
   }
   & p {
     line-height: 30px;
     padding-bottom: 5px;
+  }
+  html {
+    overflow-x: hidden;
   }
 
 }
