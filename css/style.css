@@ -398,12 +398,12 @@ main
   }
 
   .img-01 {
-    background-image: url(../img/img-frame1.jpg);
+    background-image: url(../img/img-frame1.png);
     animation: slide-animation-01 10s infinite;
   }
 
   .img-02 {
-    background-image: url(../img/img-frame2.jpg);
+    background-image: url(../img/img-frame2.png);
     animation: slide-animation-02 10s infinite;
   }
 }
@@ -668,7 +668,7 @@ main
     background-image: url(../img/system-bg.png);
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: 150px;
+    background-position: 50% 50%;
 
     & p {
       line-height: 70px;
@@ -828,10 +828,34 @@ mainレスポンシブ
   }
   .phone-img-frame {
     display: block;
+    position: relative;
 
     & img {
       width: 100%;
       margin-block: 50px;
+    }
+    & img:first-of-type {
+      margin-bottom: 10vw;
+    }
+    .img-frame1-box {
+      position: absolute;
+      top: 25px;
+      right: 60px;
+      width: var(--responsive-width1);
+      height: 78vw;
+      border: 2px solid #000;
+      z-index: -1;
+      overflow-x: hidden;
+    }
+    .img-frame2-box {
+      position: absolute;
+      top: 95vw;
+      left: 60px;
+      width: var(--responsive-width1);
+      height: 75vw;
+      border: 2px solid #000;
+      z-index: -1;
+      overflow-x: hidden;
     }
   }
   .sns-container {
@@ -937,7 +961,6 @@ mainレスポンシブ
     .system-wrapper {
       height: 80vw;
       background-size: 70vw auto;
-      background-position: 2vw;
 
       & p {
         font-size: 2.8vw;
