@@ -1154,6 +1154,7 @@ footerレスポンシブ
         }
 
         .contact-box {
+          width: 100vw;
           flex-direction: column;
 
           .sns-wrapper {
@@ -1180,6 +1181,9 @@ footerレスポンシブ
   }
 
   .footer-nav {
+    .footer-nav-box {
+      height: 200px;
+    }
     .nav-wrapper {
       width: 100vw;
       padding-left: 10px;
