@@ -840,10 +840,10 @@ mainレスポンシブ
 
     & img {
       width: 100%;
-      margin-block: 50px;
+      margin-bottom: 10vw;
     }
     & img:first-of-type {
-      margin-bottom: 10vw;
+      margin-top: 50px;
     }
     .img-frame1-box {
       position: absolute;
