@@ -1266,6 +1266,7 @@ FAQページ
   & h2 {
     margin-top: 10px;
     margin-left: 10px;
+    text-shadow: none;
   }
 
   .question-box {
@@ -1287,6 +1288,7 @@ FAQページ
         height: 40px;
         background-color: #fff;
         border-radius: 50%;
+        z-index: -1;
       }
 
       .box2 {
@@ -1326,6 +1328,7 @@ FAQページ
         height: 40px;
         background-color: var(--color-blue);
         border-radius: 50%;
+        z-index: -1;
       }
 
       .box2 {
