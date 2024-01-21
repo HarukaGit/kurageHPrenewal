@@ -1355,7 +1355,7 @@ FAQページレスポンシブ
     display: block;
   }
   .FAQ-container2 {
-    width: var(--responsive-width2);
+    width: var(--responsive-width1);
     padding-top: 65vw;
   }
 .FAQ-container {
@@ -1363,11 +1363,33 @@ FAQページレスポンシブ
 
     .answer {
       padding-right: 20px;
+      .box1 {
+        left: -10px;
+      }
+      .box2 {
+        left: -15px;
+      }
+      .box3 {
+        left: -15px;
+      }
     }
     & p {
       letter-spacing: 2px;
       line-height: 30px;
       padding-block: 5px;
+    }
+    .question {
+      .box1 {
+        right: -10px;
+      }
+      .box2 {
+        bottom: -25px;
+        right: -15px;
+      }
+      .box3 {
+        bottom: -45px;
+        right: -15px;
+      }
     }
   }
 }
