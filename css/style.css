@@ -850,17 +850,17 @@ mainレスポンシブ
       top: 25px;
       right: 60px;
       width: var(--responsive-width1);
-      height: 78vw;
+      height: 75vw;
       border: 2px solid #000;
       z-index: -1;
       overflow-x: hidden;
     }
     .img-frame2-box {
       position: absolute;
-      top: 95vw;
+      top: 85vw;
       left: 60px;
       width: var(--responsive-width1);
-      height: 75vw;
+      height: 72vw;
       border: 2px solid #000;
       z-index: -1;
       overflow-x: hidden;
