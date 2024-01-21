@@ -33,12 +33,14 @@ html {
   scroll-behavior: smooth;
   background-color: var(--color-light-brown);
   overflow-x: hidden;
-    visibility: hidden;
+  visibility: hidden;
 
-.wf-active,
-.loading-delay {
-    visibility: visible;
 }
+.wf-active {
+  visibility: visible;
+}
+.loading-delay {
+  visibility: visible;
 }
 h2 {
   font-family: setofont-sp, sans-serif;
