@@ -32,6 +32,7 @@ html {
   max-width: 100%;
   scroll-behavior: smooth;
   background-color: var(--color-light-brown);
+  overflow-x: hidden;
   visibility: hidden;
 
 }
