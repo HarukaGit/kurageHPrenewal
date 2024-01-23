@@ -32,7 +32,6 @@ html {
   max-width: 100%;
   scroll-behavior: smooth;
   background-color: var(--color-light-brown);
-  overflow-x: hidden;
   visibility: hidden;
 
 }
@@ -86,10 +85,10 @@ p {
 共通設定レスポンシブ
 ----------------------------------------------------- */
 @media (max-width:900px) {
-  main {
-    width: 100%;
-    overflow-x: hidden;
-  }
+    main {
+      width: 100%;
+      overflow: hidden;
+    }
 
   h2 {
     font-size: 28px;
@@ -845,7 +844,6 @@ mainレスポンシブ
       width: 100%;
       top: 150px;
       left: 0;
-      overflow-x: hidden;
     }
 
     .about-wrapper {
@@ -903,7 +901,6 @@ mainレスポンシブ
         height: 75vw;
         border: 2px solid #000;
         z-index: -1;
-        overflow-x: hidden;
       }
 
       .img-frame2-box {
@@ -914,7 +911,6 @@ mainレスポンシブ
         height: 72vw;
         border: 2px solid #000;
         z-index: -1;
-        overflow-x: hidden;
       }
     }
 
@@ -929,7 +925,6 @@ mainレスポンシブ
     & h3 {
       width: 100%;
       left: 0;
-      overflow-x: hidden;
     }
 
     .left {
@@ -976,7 +971,6 @@ mainレスポンシブ
         border: 2px solid #000;
         border-right: none;
         z-index: -1;
-        overflow-x: hidden;
       }
     }
   }
@@ -987,7 +981,6 @@ mainレスポンシブ
     & h3 {
       width: 100%;
       left: 0;
-      overflow-x: hidden;
     }
 
     .right {
@@ -1016,7 +1009,6 @@ mainレスポンシブ
         height: 80vw;
         border: 2px solid #000;
         z-index: -1;
-        overflow-x: hidden;
       }
     }
 
@@ -1051,7 +1043,6 @@ mainレスポンシブ
     & h3 {
       width: 100%;
       left: 0;
-      overflow-x: hidden;
     }
 
     .left {
@@ -1079,7 +1070,6 @@ mainレスポンシブ
         border: 2px solid #000;
         border-right: none;
         z-index: -1;
-        overflow-x: hidden;
       }
     }
 
@@ -1091,7 +1081,6 @@ mainレスポンシブ
     & h3 {
       width: 100%;
       left: 0;
-      overflow-x: hidden;
     }
 
     .right {
@@ -1445,7 +1434,7 @@ FAQページレスポンシブ
 
   .FAQ-mainvisual {
     display: block;
-    
+
   }
 
   .FAQ-container2 {
