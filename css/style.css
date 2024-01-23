@@ -323,7 +323,6 @@ p {
 
   .mainvisual {
     position: relative;
-    overflow-x: hidden;
 
     .pc-mainvisual {
       display: none;
@@ -1446,6 +1445,7 @@ FAQページレスポンシブ
 
   .FAQ-mainvisual {
     display: block;
+    
   }
 
   .FAQ-container2 {
